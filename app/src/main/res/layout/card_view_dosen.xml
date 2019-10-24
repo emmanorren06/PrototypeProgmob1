@@ -38,7 +38,7 @@
             app:srcCompat="@mipmap/ic_launcher_round" />
 
         <TextView
-            android:id="@+id/txtNim"
+            android:id="@+id/txtNidn"
             android:layout_width="143dp"
             android:layout_height="26dp"
             android:layout_marginTop="16dp"
