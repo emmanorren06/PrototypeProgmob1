@@ -1,63 +1,61 @@
 package prototypeprogmob.com.Model;
 
 public class KRSSI {
-    private String nama;
-    private String nim;
-    private String gender;
-    private String hobby;
-    private String cita;
-    private String moto;
-    private int ImgMhs;
+    private String Kode;
+    private String Matkul;
+    private String Hari;
+    private String Sesi;
+    private String JmlSks;
+    private String Dosen;
+    private String JmlMhs;
 
-    public KRSSI(String nama, String nim, String gender, String hobby, String cita, String moto, int ImgMhs){
-        this.nama = nama;
-        this.nim = nim;
-        this.gender = gender;
-        this.hobby = hobby;
-        this.cita = cita;
-        this.moto = moto;
-        this.ImgMhs = ImgMhs;
+    public KRSSI(String Kode, String Matkul, String Hari, String Sesi, String JmlSks, String Dosen, String JmlMhs){
+        this.Kode = Kode;
+        this.Matkul = Matkul;
+        this.Hari = Hari;
+        this.Sesi = Sesi;
+        this.JmlSks = JmlSks;
+        this.Dosen = Dosen;
+        this.JmlMhs = JmlMhs;
     }
-    public String getNama(){
-        return nama;
+    public String getKode(){
+        return Kode;
     }
-    public void setNama(String nama){
-        this.nama = nama;
+    public void setKode(String Kode){
+        this.Kode = Kode;
     }
-    public String getNim(){
-        return nim;
+    public String getMatkul(){
+        return Matkul;
     }
-    public void setNim(String nim){
-        this.nim = nim;
+    public void setMatkul(String Matkul){
+        this.Matkul = Matkul;
     }
-    public String getGender(){
-        return gender;
+    public String getHari(){
+        return Hari;
     }
-    public void setGender(String gender){
-        this.gender = gender;
+    public void setHari(String Hari){
+        this.Hari = Hari;
     }
-    public String getHobby(){
-        return hobby;
+    public String getSesi(){
+        return Sesi;
     }
-    public void setHobby(String hobby){
-        this.hobby = hobby;
+    public void setSesi(String Sesi){
+        this.Sesi = Sesi;
     }
-    public String getCita(){
-        return cita;
+    public String getJmlSks(){
+        return JmlSks;
     }
-    public void setCita(String cita){
-        this.cita = cita;
+    public void setJmlSks(String JmlSks){
+        this.JmlSks = JmlSks;
     }
-    public String getMoto(){
-        return moto;
+    public String getDosen(){
+        return Dosen;
     }
-    public void setMoto(String moto){
-        this.moto = moto;
+    public void setDosen(String Dosen){
+        this.Dosen = Dosen;
     }
-    public int getImgMhs(){
-        return ImgMhs;
-    }
-    public void setImgMhs(int imageResource){
-        this.ImgMhs = ImgMhs;
+    public String getJmlMhs(){ return JmlMhs; }
+    public void setJmlMhs(String JmlMhs){
+        this.JmlMhs = JmlMhs;
     }
 }

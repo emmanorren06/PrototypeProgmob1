@@ -9,8 +9,8 @@
     app:cardUseCompatPadding="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="402dp"
-        android:layout_height="318dp">
+        android:layout_width="399dp"
+        android:layout_height="213dp">
 
 
         <TextView
@@ -22,10 +22,10 @@
             android:text="TextView"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.067"
+            app:layout_constraintHorizontal_bias="0.068"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.439" />
+            app:layout_constraintVertical_bias="0.519" />
 
         <TextView
             android:id="@+id/txtSesi"
@@ -38,7 +38,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtHari"
-            app:layout_constraintVertical_bias="0.048" />
+            app:layout_constraintVertical_bias="0.139" />
 
         <TextView
             android:id="@+id/txtJumlahsks"
@@ -51,33 +51,29 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtSesi"
-            app:layout_constraintVertical_bias="0.051" />
+            app:layout_constraintVertical_bias="0.34" />
 
         <TextView
-            android:id="@+id/txtDsn"
-            android:layout_width="280dp"
-            android:layout_height="30dp"
+            android:id="@+id/txtKode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
             android:text="TextView"
-            app:layout_constraintBottom_toTopOf="@+id/txtEmail"
-            app:layout_constraintEnd_toStartOf="@+id/txtNama"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintBottom_toTopOf="@+id/txtHari"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtJumlahsks" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.494" />
 
         <TextView
-            android:id="@+id/txtJmlMhs"
-            android:layout_width="280dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
+            android:id="@+id/txtMatkul"
+            android:layout_width="128dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="184dp"
             android:text="TextView"
-            app:layout_constraintBottom_toTopOf="@+id/txtEmail"
-            app:layout_constraintEnd_toStartOf="@+id/txtNama"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtDsn" />
+            app:layout_constraintBottom_toTopOf="@+id/txtHari"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.53" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

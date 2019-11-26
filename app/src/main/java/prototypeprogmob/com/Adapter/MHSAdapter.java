@@ -31,10 +31,10 @@ public class MHSAdapter extends RecyclerView.Adapter<MHSAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.txtNama.setText(mhsSIArrayList.get(position).getNama());
         holder.txtNim.setText(mhsSIArrayList.get(position).getNim());
-        holder.txtAlamat.setText(mhsSIArrayList.get(position).getAlamat());
+        holder.txtNama.setText(mhsSIArrayList.get(position).getNama());
         holder.txtEmail.setText(mhsSIArrayList.get(position).getEmail());
+        holder.txtAlamat.setText(mhsSIArrayList.get(position).getAlamat());
         holder.ImgMhs.setImageResource(mhsSIArrayList.get(position).getImgMhs());
     }
 
@@ -44,15 +44,15 @@ public class MHSAdapter extends RecyclerView.Adapter<MHSAdapter.ViewHolder> {
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
-        private TextView txtNama, txtNim, txtAlamat, txtEmail;
+        private TextView txtNim, txtNama, txtEmail, txtAlamat;
          ImageView ImgMhs;
 
         public ViewHolder(View view){
             super(view);
-            txtNama = view.findViewById(R.id.txtNama);
             txtNim = view.findViewById(R.id.txtNim);
-            txtAlamat = view.findViewById(R.id.txtAlamat);
+            txtNama = view.findViewById(R.id.txtNama);
             txtEmail = view.findViewById(R.id.txtEmail);
+            txtAlamat = view.findViewById(R.id.txtAlamat);
             ImgMhs = view.findViewById(R.id.ImgMhs);
         }
     }

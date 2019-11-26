@@ -9,24 +9,24 @@ public class MhsSI {
     private String Email;
     private int ImgMhs;
 
-    public MhsSI(String nama, String nim, String Alamat, String Email, int ImgMhs){
-        this.nama = nama;
+    public MhsSI(String nim,String nama, String Alamat, String Email, int ImgMhs){
         this.nim = nim;
+        this.nama = nama;
         this.Alamat = Alamat;
         this.Email = Email;
         this.ImgMhs = ImgMhs;
-    }
-    public String getNama(){
-        return nama;
-    }
-    public void setNama(String nama){
-        this.nama = nama;
     }
     public String getNim(){
         return nim;
     }
     public void setNim(String nim){
         this.nim = nim;
+    }
+    public String getNama(){
+        return nama;
+    }
+    public void setNama(String nama){
+        this.nama = nama;
     }
     public String getAlamat(){
         return Alamat;
