@@ -25,41 +25,42 @@ public class RecyclerMhsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycler_mhs);
-
-        Button resetButton = (Button) findViewById(R.id.BtnSimpan);
-        resetButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(RecyclerMhsActivity.this);
-
-                builder.setMessage("Apakah anda yakin untuk mereset nilai prototype?")
-                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                Toast.makeText(RecyclerMhsActivity.this, "Tidak jadi reset", Toast.LENGTH_SHORT).show();
-                            }
-                        })
-
-                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                Intent i = new Intent(RecyclerMhsActivity.this,MenuAdmin.class);
-                                startActivity(i);
-                            }
-                        });
-
-                AlertDialog dialog = builder.create();
-                dialog.show();
-            }
-
-        });
-
         addData();
-
+//        Button resetButton = (Button) findViewById(R.id.BtnSimpan);
+//        resetButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                AlertDialog.Builder builder = new AlertDialog.Builder(RecyclerMhsActivity.this);
+//
+//                builder.setMessage("Apakah anda yakin untuk mereset nilai prototype?")
+//                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+//                            public void onClick(DialogInterface dialog, int which) {
+//                                Toast.makeText(RecyclerMhsActivity.this, "Tidak jadi reset", Toast.LENGTH_SHORT).show();
+//                            }
+//                        })
+//
+//                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+//                            public void onClick(DialogInterface dialog, int which) {
+//                                Intent i = new Intent(RecyclerMhsActivity.this,MenuAdmin.class);
+//                                startActivity(i);
+//                            }
+//                        });
+//
+//                AlertDialog dialog = builder.create();
+//                dialog.show();
+//            }
+//
+//        });
         recyclerView = findViewById(R.id.rvDataMhs);
         mhsAdapter = new MHSAdapter(mhsSIArrayList);
-        RecyclerView.LayoutManager layoutManager = new
-                LinearLayoutManager(RecyclerMhsActivity.this);
+        ArrayList<MhsSI> mahasiswaLIst;
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(RecyclerMhsActivity.this);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(mhsAdapter);
+    }
+    public void editMhs(View view){
+        Intent i = new Intent(RecyclerMhsActivity.this,CRUDMhs.class);
+        startActivity(i);
     }
     private  void addData(){
         mhsSIArrayList = new ArrayList<>();

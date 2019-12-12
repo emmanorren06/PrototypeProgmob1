@@ -42,7 +42,7 @@ public class DSN {
     }
 
     public void setId(String id) {
-        this.nama = id;
+        this.id = id;
     }
 
     public String getNama() {
@@ -98,21 +98,21 @@ public class DSN {
         return foto;
     }
 
-    public void setFoto(String foto) {
+    public void setFoto(int imageResource) {
 
         this.foto = foto;
     }
 
-    public String toString() {
-        return "Post{" +
-                "id=" + id + '\'' +
-                ", nama=" + nama + '\'' +
-                ", email=" + email + '\'' +
-                ", alamat=" + alamat + '\'' +
-                ", gelar=" + gelar + '\'' +
-                ", foto=" + foto +
-                '}';
-    }
+//    public String toString() {
+//        return "Post{" +
+//                "id=" + id + '\'' +
+//                ", nama=" + nama + '\'' +
+//                ", email=" + email + '\'' +
+//                ", alamat=" + alamat + '\'' +
+//                ", gelar=" + gelar + '\'' +
+//                ", foto=" + foto +
+//                '}';
+//    }
 }
 //https://code.tutsplus.com/id/tutorials/sending-data-with-retrofit-2-http-client-for-android--cms-27845
 

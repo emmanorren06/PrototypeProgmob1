@@ -3,25 +3,69 @@ package prototypeprogmob.com.Network;
 import java.util.ArrayList;
 import java.util.List;
 
-//import ukdw.com.projectprogmoba.Model.DefaultResult;
 import prototypeprogmob.com.Model.DSN;
+import prototypeprogmob.com.Model.DefaultResult;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
-import retrofit2.http.Query;
 
 public interface GetDataService {
 
     @GET("/api/progmob/dosen/{nim_progmob}")
-    Call<List<DSN>> getDosenAll(@Path("nim_progmob") String nim_progmob);
+    Call<ArrayList<DSN>> getDosenAll(@Path("nim_progmob") String nim_progmob);
     //Call<List<Dosen>> getDosenAll(@Query("nim_progmob") String nim_progmob);
 
+    @FormUrlEncoded
+    @POST("/api/progmob/dosen/createfoto")
+    Call<DefaultResult> insert_foto_dosen(
+            @Field("nama") String nama,
+            @Field("nidn") String nidn,
+            @Field("alamat") String alamat,
+            @Field("email") String email,
+            @Field("gelar") String gelar,
+            @Field("foto") String foto,
+            @Field("nim_progmob") String nim_progmob
+    );
+
+    @FormUrlEncoded
+    @POST("/api/progmob/dosen/Updatewhitefoto")
+    Call<DefaultResult> update_foto_dosen   (
+            @Field("id") String id,
+            @Field("nama") String nama,
+            @Field("nidn") String nidn,
+            @Field("alamat") String alamat,
+            @Field("email") String email,
+            @Field("gelar") String gelar,
+            @Field("foto") String foto,
+            @Field("nim_progmob") String nim_progmob
+    );
+    @FormUrlEncoded
+    @POST("/api/progmob/dosen/delete")
+    Call<DefaultResult>delete_dosen(
+            @Field("id") String id,
+            @Field("nim_progmob") String nim_progmob
+    );
+//
 //    @FormUrlEncoded
-//    @POST("/api/progmob/dosen/create")
-//    Call<DefaultResult> insert_dosen(
+//    @POST("api/progmob/dosen/update")
+//    Call<DefaultResult>update_dosen(
+//            @Field("id") String id,
+//            @Field("nama") String nama,
+//            @Field("nidn") String nidn,
+//            @Field("alamat") String alamat,
+//            @Field("email") String email,
+//            @Field("gelar") String gelar,
+//            @Field("foto") String foto,
+//            @Field("nim_progmob") String nim_progmob
+//    );
+//
+//    @FormUrlEncoded
+//    @POST("api/progmob/dosen/updatewithfoto")
+//    Call<DefaultResult>update_dosen_foto(
+//            @Field("id") String id,
 //            @Field("nama") String nama,
 //            @Field("nidn") String nidn,
 //            @Field("alamat") String alamat,
